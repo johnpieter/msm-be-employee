@@ -44,8 +44,13 @@ module.exports = db1.define(johnpietCompany.EMPLOYEE, {
   },
   description: {
     type: Sequelize.STRING,
-    allowNull: true,
-  }
+    allowNull: true
+  },
+  created_date: {
+    type: Sequelize.DATE,
+    allowNull: false,
+    defaultValue: Sequelize.NOW,
+  },
 }, {
   classMethods: {}, // for custom query
   freezeTableName: true,
